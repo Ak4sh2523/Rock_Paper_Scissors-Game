@@ -1,0 +1,191 @@
+<html>
+    <head>
+        <title>R-P-S</title>
+        <link rel="icon" href=(c:\Users\Akash\Downloads\rock-paper-scissors.png) type="image/x-icon"> 
+        <style>
+            .mainText
+            {
+                color: rgb(255, 255, 255);
+                font-size: 4pc;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+               text-align: center;
+               font-size: 2pc;
+               position: fixed;
+               top: 10px;
+               left: 600px ;
+            }
+            .rockbut
+            {
+                background-color: #F535AA;
+                color:rgb(0, 0, 0);
+                position: fixed;
+                top: 200;
+                left: 200;
+                border:none ;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 9em;
+                width: 250px;
+                height: 250px;
+                opacity: 0;
+                
+            }
+            .paperbut
+            {
+                background-color: #04d9ff;
+                color:rgb(0, 0, 0);
+                position: fixed;
+                top:200;
+                left:650;
+                border:none ;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 9em;
+                width: 250px;
+                height: 250px;
+                opacity: 0;
+            }
+            .scissorsbut
+            {
+                background-color:  #FF5F1F;
+                color:rgb(0, 0, 0);
+                position: fixed;
+                top:200;
+                left:1100;
+                border:none ;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 9em;
+                width: 250px;
+                height: 250px;
+                opacity: 0;
+
+            }
+            .rockimg
+            {
+                position: fixed;                         
+                top: 200;
+                left: 200;
+                width: 250px;
+                height: 250px;
+                border-radius:10em ;
+            }
+            .paperimg
+            {
+                position: fixed;
+                top:200;
+                left:650;
+                width: 250px;
+                height: 250px;
+                border-radius:10em ;
+            }
+            .scissorsimg
+            {
+                position: fixed;
+                top:200;
+                left:1100;
+                width: 250px;
+                height: 250px;
+                border-radius:10em ;
+            }
+            .donot
+            {
+                position: absolute;
+                top: 680;
+                left: 600;
+            }
+            .resBox
+            {
+                position: fixed;
+                top: 550px;
+                left: 525px;
+                height: 40px;
+                width: 500px;
+                background-color: white;
+                border-radius: 1em;
+            }
+
+        </style>
+    </head>
+    <body bgcolor="#0E124D">
+        <h4 class="donot">for more games do not contact akashkarthi620@gmail.com</h4>
+        <img class="rockimg" src="c:\Users\Akash\Documents\rps game (akash)\images\rock.png" alt="error">
+        <img class="paperimg" src="c:\Users\Akash\Documents\rps game (akash)\images\paper.png" alt="error">
+        <img class="scissorsimg" src="c:\Users\Akash\Documents\rps game (akash)\images\scissors.png" alt="error">
+        <div class="resBox"></div>
+        <h1 class="mainText"><span style="color: #D04671;">ROCK</span> <SPAN style="color: #DDC14B;">PAPER</SPAN> <SPAN style="color: #71B8C2;">SCISSORS</SPAN></h1>
+        <h1 style="position:fixed;top:530px;left:600px;color: black;" id="cput"></h1>
+        <button class="rockbut" onclick="
+        gameRule();
+        if (b === 'rock')
+        {
+            c = ('I too chose rock, Its a Tie');
+        }
+        else if (b === 'paper')
+        {
+            c = ('I chose paper, loooserrr');
+        }
+        else 
+        {
+            c = ('I chose scissors, You Win');
+        }
+        document.getElementById('cput').textContent = c;
+        ">
+            ROCK
+        </button>
+        <button class="paperbut" onclick="
+        gameRule();
+        if (b === 'paper')
+        {
+            c = ('I too chose paper, Its a Tie');
+        }
+        else if (b === 'scissors')
+        {
+            c = ('I chose scissors, loooserr');
+        }
+        else 
+        {
+            c = ('I chose rock, You Win');
+        }
+        document.getElementById('cput').textContent = c;
+        ">
+            PAPER
+        </button>
+        <button class="scissorsbut" onclick="
+        gameRule();
+        if (b === 'paper')
+        {
+            c = ('I chose paper, You Win');
+        }
+        else if (b === 'scissors')
+        {
+            c = ('I chose scissors, Its a Tie');
+        }
+        else 
+        {
+            c = ('I chose rock, loooserrr');
+        }
+        document.getElementById('cput').textContent = c;
+        ">
+            SCISSOR
+        </button>
+        
+    </body>
+    <script>
+        let b = '';
+        let c = '';
+        function gameRule()
+           {  
+               let randNum = Math.random();
+               if(randNum > 0 && randNum <=1/3)
+                {
+                  b = 'rock';
+                }
+               else if(randNum > 1/3 && randNum <=2/3)
+                {
+                  b = 'paper';
+                }
+               if(randNum > 2/3 && randNum <=1)
+                {
+                  b = 'scissors';
+                }
+           }
+   </script>
+</html>
